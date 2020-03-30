@@ -1,0 +1,22 @@
+{
+  "name": "bintocol-node",
+  "version": "1.0.0",
+  "description": "Minimalistic event-oriented binary protocol designed for WebSocket communication",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --rootDir=test"
+  },
+  "keywords": [
+    "binary",
+    "websocket",
+    "protocol"
+  ],
+  "author": "Wojciech Olejnik (Divoolej)",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  },
+  "dependencies": {
+    "lz4": "^0.6.3"
+  }
+}
