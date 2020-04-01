@@ -62,7 +62,7 @@ describe("decode", () => {
           0x6c, 0x6c, 0x2c, 0x22, 0x62, 0x6f, 0x6f, 0x6c,
           0x22, 0x3a, 0x74, 0x72, 0x75, 0x65, 0x7d,
         ]);
-        expect(decode(message)).toEqual(expectedPayload);
+        expect(decode(message)).toEqual({ event: TEST_EVENT, data: expectedPayload });
       });
     });
 
@@ -84,7 +84,7 @@ describe("decode", () => {
           0x99, 0xc2, 0x00, 0x00, 0x40, 0x00, 0x60, 0x01,
           0x10, 0x26, 0x92,
         ]);
-        expect(decode(message)).toEqual(expectedPayload);
+        expect(decode(message)).toEqual({ event: TEST_EVENT, data: expectedPayload });
       });
     });
   });
@@ -120,7 +120,7 @@ describe("decode", () => {
           0x6c, 0x22, 0x3a, 0x74, 0x72, 0x75, 0x65, 0x7d,
           0x00, 0x00, 0x00, 0x00, 0x10, 0xf1, 0xd0, 0xd9,
         ]);
-        expect(decode(message)).toEqual(expectedPayload);
+        expect(decode(message)).toEqual({ event: TEST_EVENT, data: expectedPayload });
       });
     });
 
@@ -144,7 +144,7 @@ describe("decode", () => {
           0x00, 0x60, 0x01, 0x10, 0x26, 0x92, 0x00, 0x00,
           0x00, 0x00, 0x1f, 0x03, 0x00, 0xa0,
         ]);
-        expect(decode(message)).toEqual(expectedPayload);
+        expect(decode(message)).toEqual({ event: TEST_EVENT, data: expectedPayload });
       });
     });
   });
