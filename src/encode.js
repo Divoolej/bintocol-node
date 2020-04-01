@@ -4,7 +4,7 @@ const { BINARY: { MASKS } } = require('./constants');
 const { MASK_1, MASK_6 } = MASKS;
 const { OBJECT, BOOL, INT, UINT, STRING, ARRAY } = types;
 
-const encode = (payload, options) => {
+const encode = (payload, options = { compress: 'auto', json: true }) => {
   const { event, data } = payload;
   let encodedData, encodedHeader;
   if (options.compress === 'auto') {
