@@ -32,22 +32,18 @@ const decodeType = (schema, state) => {
   switch (schema.type) {
     case BOOL:
       return decodeBool(state);
-      break;
     case INT:
       return decodeSignedInt(schema.size, state);
-      break;
     case UINT:
       return decodeUnsignedInt(schema.size, state);
-      break;
     case STRING:
       return decodeString(schema.lengthSize, state);
-      break;
     case OBJECT:
       return decodeObject(schema.schema, state);
-      break;
     case ARRAY:
       return decodeArray(schema.lengthSize, schema.content, state);
-      break;
+    case NOTHING:
+      return state;
     default:
       throw `Unknown type: ${schema.type}`
   }

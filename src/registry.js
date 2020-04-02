@@ -17,6 +17,7 @@ const registry = {
     STRING: 'STRING',
     ARRAY: 'ARRAY',
     OBJECT: 'OBJECT',
+    NOTHING: 'NOTHING',
   },
 };
 
