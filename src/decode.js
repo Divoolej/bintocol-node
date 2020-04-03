@@ -2,7 +2,7 @@ const lz4 = require('lz4');
 const { getSchema, types } = require('./registry');
 const { BINARY: { MASKS } } = require('./constants');
 const { MASK_1, MASK_6 } = MASKS;
-const { OBJECT, BOOL, INT, UINT, STRING, ARRAY } = types;
+const { OBJECT, BOOL, INT, UINT, STRING, ARRAY, NOTHING } = types;
 
 const decode = (message) => {
   const { event, options } = decodeHeader(message[0]);
